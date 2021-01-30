@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>Mathematics</title>
+</head>
+<style>
+div {
+  margin: 100px;
+}
+  .button {
+    background-color: azure;
+    text-align: center;
+    min-width: 300px;
+        }
+</style>
+<body>
+
+<h1 style="color:darkgreen;"><center>All in one Calculator</center></h1>
+    
+<div>
+<ul id = "main_list" style = "color:black ; font-family: monospace">
+    <li>
+        <button type = "button" class = "button" ><h2>Factors of a number</h2></button>
+    </li>
+    
+    <li>
+        <button type = "button" class = "button" ><h2>Fibonacci Number</h2></button>
+    </li>
+</ul>
+
+
+
+ 
+    
+
+</div>
+    
+
+<script src = "factorization.js"></script>
+<script src = "fibonacci_number.js"></script>
+<script src = "jquery-3.2.1.min.js"></script>
+
+<script>
+
+    
+  $("#main_list li button").click(function(){
+      
+      $(this).closest("li").append("<input class= 'input' type = 'number' placeholder = \"Enter after input\">");
+      var holder = $(this).closest("li button").text();
+      
+      
+      
+        $(".input").on('keyup', function (e) {
+            if (e.key === 'Enter' || e.keyCode === 13) {
+                if(holder === "Factors of a number"){
+                    var output = factor($(this).val()).toString();
+                    $(this).closest("li").append(`<p> prime factorization of ${$(this).val()} is  ${output}</p>`);
+                }
+                
+                if(holder === "Fibonacci Number"){
+                    var output = fib($(this).val());
+                    $(this).closest("li").append(`<p>Fibonacci number of ${$(this).val()} is ${output} </p>`)
+                }
+                
+    }
+    });
+      
+      
+  });
+    
+    
+
+
+</script>
+    
+    
+
+</body>
+</html> 

@@ -1,0 +1,92 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>30min</title>
+            <style>
+        #sortable {
+            list-style-type: none;
+            padding: 0;
+            width: 500px;
+            margin-bottom: 40px;
+            margin-left: 37%;
+        }
+        #sortable li {
+            margin: 3px 3px 3px 0;
+            padding-top: 8px;
+            float: left;
+            width: 100px;
+            height: 40px; font-size: 1.4em;
+            text-align: center;
+        }
+        table tr td{
+            font-size: 120%;
+        }
+    </style>
+    
+    <link rel="stylesheet" href="public/css/mdb.min.css">
+    <link rel="stylesheet" href="dependencies/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="public/css/material-dashboard-angular2-v1.4.2/documentation/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/w3.css">
+    <link rel="stylesheet" href="public/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="public/css/material-dashboard-angular2-v1.4.2/documentation/css/material-dashboard.css">
+    <link rel="stylesheet" href="public/css/material-dashboard-angular2-v1.4.2/documentation/css/demo-documentation.css">
+    <link rel ="stylesheet" href="public/css/g-m-u-style.css">
+    </head>
+<body>
+    <div style="margin-top:2px;font-size:100%;width:80%;" id="mainCard" class="col-md-8">
+            
+	       <div class="card w3-black">
+		      <div class="card-header" data-background-color="green">
+                  <i id="recLauncerBtn" style="float:right;cursor:pointer;color:black;font-size:18px" class="fa fa-history" aria-hidden="true"></i>
+                <fieldset>       
+                    <legend class="contextHeading">Exercises : </legend>
+                    
+                    <button id="exAddBtn" class="bk-delete ui-button ui-widget ui-corner-all" style='margin-bottom:7.5px;'><i class="fa fa-plus" style="font-size:14px;color:brown;float:right"></i></button>
+                    
+                </fieldset>
+
+		      </div>
+             <div id="mainCont" class="card-content">
+             <div id="timer" class="w3-black hide-msg">
+                 
+                <div id="timeBar" class="w3-container w3-card-2 w3-red w3-center"></div>
+                <div id="currentExBar" class="w3-container w3-indigo w3-center"></div>
+             </div>
+               </div>
+		      <div class="card-footer w3-black w3-padding" style="border-radius:10%;text-align:center">
+                  <div class="stats">
+                      <button id="startBtn" class="btn btn-sm align-middle btn-outline-primary waves-effect waves-light" type="button">Start</button>
+                  </div>
+		      </div>
+            </div>
+        </div>
+        <div class="modal fade w3-black" id="repsContModal" tabindex="-1" role="dialog" 
+        aria-labelledby="repsContModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content w3-sand">
+                <div class="modal-header">
+                <div class="col-md-12">
+                      <h5 class="modal-title contextHeading codeContainer" id="repsContModalLabel">Fill in the reps for each exercise: <em class="w3-blue"></em></h5>
+                    </div>
+                </div>
+                <div id="repsCont" class="modal-body">
+                 
+              </div>
+            </div>
+              </div></div>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src = "scripts.js"></script>
+    
+    </body>
+</html>

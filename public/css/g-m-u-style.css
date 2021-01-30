@@ -1,0 +1,289 @@
+p{
+ font-family:monospace, serif, sans-serif;
+        font-size:1.1em;
+    }
+
+    
+    .codeContainer{
+			width:96%;
+			height:100%;
+			padding:2px;
+        padding-bottom: 4px;
+        padding-left: 5px;
+        margin-bottom: 4px;
+			background-color:whitesmoke;
+			color:dimgray;
+			font-size:115%;
+        overflow: auto;
+        font-weight: bold;
+        
+		}
+    
+    .exampleDeclarer{
+        font-weight:bold;
+	color:#113311;
+	font-family:verdana, monospace, serif;
+	font-size:.7em;
+    }
+    
+    .contentTheme{
+        background-color:#f2e9e7;
+        font-family:monospace, inherit;
+        width:98%;
+        font-size:102%;
+        padding-left:2px;
+    }
+    
+    
+    .g-m-u-card{
+
+         margin: auto;
+		margin-top:2px;
+        padding: 1px;
+        padding-bottom: 4px;
+        margin-bottom:6px;
+		height: 100%;
+		font-size:100%;
+    }
+
+
+.contextHeading{
+       font-family:verdana, arial, serif;
+			font-weight:bolder;
+         text-shadow: 0px 1px 1px grey;
+        font-size: 102%;
+}
+.mainHeading{
+	font-family: monospace;
+		font-size:120%;
+    text-align: center;
+           
+}
+
+  #gmu_bb_logo{
+        display: table;
+      font-size: .7em;
+      float: left;
+      font-family: verdana, fantasy, serif;
+      padding: 1px;
+        /*height: 34px;*/
+        border-radius: 12%;
+      border-right: 1px solid red;
+      border-left: 2px outset green;
+      /*margin-right: 18px;*/
+      color: firebrick;
+        
+}
+
+.demo1{
+        background-color:#e2ebee;
+    border-bottom:1px #bfbfbf solid ;
+}
+.cont-container{
+    margin: auto;
+    width:98%;
+}
+
+.top-lev-heading{
+    text-align: center;
+    font-family:monospace,arial, serif;
+    font-weight: bolder;
+    font-size: 1.5em;
+    opacity: 0.8;
+    
+}
+
+.codeExplainer{
+    font-family:helvetica, arial, verdana, monospace, serif;
+    color:#171616;
+    font-size: 1.1em;
+    width: 96%;
+    padding: 2px;
+    padding: 2px;
+}
+
+
+.code-bt{
+    width:50px;
+    height: 32px;
+    margin-right: 2px;
+    margin-left:2px;
+    text-align: center;
+    border-radius:15%;
+    float:right;
+    position: relative;
+    bottom: 22px;
+  right: 6px;
+    opacity: 0.8;
+}
+.code-bt:hover{
+    opacity: 0.9;
+    font-weight: bolder;
+    cursor: pointer;
+    font-variant: small-caps;
+}
+.loadScripts{
+    border-top: 1px inset #e2ebee;
+    border-bottom:1px outset brown;
+    border-right:2px outset grey;
+    border-left: 2px inset brown;
+    padding: 3px;
+    padding-left: 6px;
+    display:none;
+    width:70%;
+    height:70%;
+    margin-top:4px;
+    margin-right:auto;
+    margin-left:auto;
+    
+}
+.blueS{
+    color:blue;
+}
+#var-store-bt{
+   position: relative;
+    bottom:6px;
+    right:6px;
+}
+#func-zero-bt{
+     position: relative;
+    bottom:6px;
+    right:6px;
+}
+.emAsHeading{
+    font-family: verdana, arial, monospace, sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+.g-m-u-headings{
+   /* width:30%;*/
+    display:table;
+    height: 36px;
+  text-shadow: 1px 1px 1px white;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0.1));
+  padding: 2px;
+    padding-right: 4px;
+    padding-left: 4px;
+  text-align: center;
+    border-radius:5%;
+    font-family:monospace, arial, serif;
+    font-weight: bolder;
+    font-size: 1.3em;
+    opacity: 0.8;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media only screen and (max-width: 1200px) {
+    .g-m-u-headings {
+        display: table;
+    }
+    .phoneBlue{
+        width: 70%;
+    }
+}
+/*-----------------*/
+.hideIt{
+        color:black;
+    }
+pre{
+    font-size:106%;
+}
+.w3-yellow{
+    padding:1px;
+}
+/*--------*/
+/*Most innerDocs Style*/
+/*----------*/
+  #circle-b{
+        width:50px;
+        height:50px;
+        border-radius:50%;
+        background-color:antiquewhite;
+        margin:2px;
+    }
+    #square-b{
+        width:50px;
+        height:50px;
+        background-color:green;
+        margin:2px;
+        margin-top: 8px;
+    }
+    #triangle-b {
+    width: 0;
+    height: 0;
+    border: solid 30px;
+        margin-bottom: 4px;
+    border-color: transparent transparent black transparent;
+}
+
+.g-m-u-output{
+    width:98%;
+    height: 10em;
+    
+}
+.outputCode{
+    width:98%;
+    height: 5em;
+    
+}
+.w3-grey{
+    padding:2px;
+}
+
+.outHead{
+    font-family: sans-serif, serif, cursive;
+    font-size: 98%;
+    color:blue;
+   
+    
+}
+.outHead > em{
+    color: red;
+    margin-right: 4px;
+}
+
+.php-output-bt{
+    margin-top: 3px;
+    font-size: 90%;
+    padding: 4px;
+    border-radius: 6%;
+}
+/*-----------*/
+.left-mar{
+    margin-left: 3px;
+    cursor: pointer;
+}
+.left-mar:hover{
+    font-weight: bolder;
+}
+/*----------*/
+#signup label.error {
+  font-size: 0.8em;
+  color: #F00;
+  font-weight: bold;
+  display: block;
+  margin-left: 215px;
+}
+#signup  input.error, #signup select.error  {
+  background: #FFA9B8;
+  border: 1px solid red;
+}
+/*--------*/
+#userLogIcon{
+    margin-right: 6px;
+    padding: 3px;
+}
+/*----------*/
+.ui-controlgroup-vertical {
+      width: 150px;
+    }
+    .ui-controlgroup.ui-controlgroup-vertical > button.ui-button,
+    .ui-controlgroup.ui-controlgroup-vertical > .ui-controlgroup-label {
+      text-align: center;
+    }
+    #car-type-button {
+      width: 120px;
+    }
+    .ui-controlgroup-horizontal .ui-spinner-input {
+      width: 20px;
+    }
