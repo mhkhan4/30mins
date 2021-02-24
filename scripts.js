@@ -44,7 +44,9 @@ $(document).ready(function(){
                         data: JSON.stringify({ name: newEx }),
                         success: function(response){
                             console.log(response);
-                            newEx('');
+                        },
+                        complete : function(){
+                            location.reload();
                         }
                     });
                 });
@@ -108,9 +110,10 @@ $(document).ready(function(){
     
             let ttlSec = minutes * 60;
             let progPerSet = minutes / ttlSets; // 30/10 = 3
-            progPerSet = progPerSet / minutes * 100;  // 3/1000
+            progPerSet = progPerSet / minutes * 100;  // 3/3000
             let initialProg = 0;
             let setsDone = 0;
+            let pressEnter = 0;
             document.body.onkeyup = function(e){
                 if(e.keyCode === 32){
                     if(initialProg >= 100){
@@ -118,14 +121,18 @@ $(document).ready(function(){
                     }else{
                         $("li.contextHeading").each(function(){
                             $(this).children("span").text(parseInt($(this).children("span").text()) - parseInt($(this).attr("id")));
-                        })
+                        });
                         initialProg += progPerSet;
                         $("#currentExBar").css("width", initialProg + "%");
                         // check not overbound 100 first
                         setsDone++;   
                         }
                        
-                    }   
+                    }
+                if(e.keyCode === 13){
+                    pressEnter = 1;
+                }
+              
                 }
             let seconds_left = minutes * 60;
             let timeString,minutesLeft,parsedSeconds,crntPace;
@@ -162,7 +169,7 @@ $(document).ready(function(){
                 }else{
                     $("#timeBar").removeClass("w3-red").addClass("w3-lime");
                 }
-                if (seconds_left <= 0 || initialProg >= 100){
+                if (seconds_left <= 0 || initialProg >= 100 || pressEnter === 1){
                     clearInterval(interval);
                     var session_done = [ttlSets, setsDone];
                     $.ajax({
@@ -175,6 +182,7 @@ $(document).ready(function(){
                         }
                         });
                     }
+                
                 }, 1000);
                 console.log(ex_started);
             
@@ -190,13 +198,14 @@ $(document).ready(function(){
                         return;
                     }
                   
-                    exInfoObj.reps[$(this).attr("id")] = $( this ).text();
-                    $("#sortable").append(`<li id='${$( this ).text()}' class="contextHeading ui-state-default"> ${$(this).attr("id")} <br> <span class='w3-indigo badge badge-light'> ${(parseInt(ex_started[index]) * ttlSets)} </span></li>`);
+                    exInfoObj.reps[index] = ex_started[index];
+                    $("#sortable").append(`<li id='${ex_started[index]}' class="contextHeading ui-state-default"> ${index} <br> <span class='w3-indigo badge badge-light'> ${(parseInt(ex_started[index]) * ttlSets)} </span></li>`);
                 }
                 /*
                 $("#mainCard fieldset input:not(:checked)").prev().remove();
                 $("#mainCard fieldset input:not(:checked), #mainCard fieldset button,#mainCard fieldset legend").remove();*/
                 $( function() {
+                    console.log(ex_started);
                     $( "#sortable" ).sortable();
                     $( "#sortable" ).disableSelection();
                 });

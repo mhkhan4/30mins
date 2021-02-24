@@ -62,10 +62,16 @@ app.post('/reps_ex', (req,res)=>{
 app.post('/session_completed', (req,res)=>{
   var the_name = req.body.name;
   res.send(the_name);
-  var sql = `INSERT INTO ex_sessions(sets_count, sets_done) VALUES (${the_name[0]},${the_name[1]} )`;
+  var sql = `INSERT INTO extra_tbl(ex1_name, ex2_name,sets_count, sets_done) VALUES ('${Object.keys(req.session.ex_info)[0]} ${req.session.ex_info[Object.keys(req.session.ex_info)[0]]}', '${Object.keys(req.session.ex_info)[1]} ${req.session.ex_info[Object.keys(req.session.ex_info)[1]]}',${the_name[0]},${the_name[1]} )`;
   con.query(sql, (err, result) =>{
       if(err) throw err;
+      console.log(Object.keys(req.session.ex_info)[0]);
   });
+
+  // var sql_record = `insert into ex_record(session_id, ex_type, reps_count) values (select id from ex_sessions where sets_count = 5, '${Object.keys(req.session.ex_info)[0]}', ${req.session.ex_info[Object.keys(req.session.ex_info)[0]]}) `
+  // con.query(sql_record, (err, result) =>{
+  //   if(err) throw err;
+  // });
 });
 
 
